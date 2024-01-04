@@ -7,10 +7,13 @@
 ### Installation
 
   ```shell
-    git clone https://github.com/viniciusfdasilva/vos.git
+  git clone https://github.com/viniciusfdasilva/vos.git
   ```
   ```shell
-    sudo make install python_path=[PYTHON_PATH]
+  cd vos
+  ```
+  ```shell
+  sudo make install python_path=[PYTHON_PATH]
   ```
 ### About Library
 *************************
@@ -26,7 +29,7 @@ Release Year: 2024
 ### Remove
 
   ```shell
-    sudo make remove python_path=[PYTHON_PATH]
+  sudo make remove python_path=[PYTHON_PATH]
   ```
 
 ### Using
