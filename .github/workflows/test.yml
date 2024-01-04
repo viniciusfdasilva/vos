@@ -22,8 +22,6 @@ jobs:
       - name: Install vos
         shell: bash
         run: |
-          sudo apt update -y
-          sudo apt install python3.10-venv -y
           cd vos
           python -m venv venv
           source venv/bin/activate
