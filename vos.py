@@ -15,12 +15,18 @@ class OS():
     
     @staticmethod
     def __panic(message : str):
+        """
+        Print e message and exit the program with error status
+        """
         print(message)
         exit(OS.__EXIT_FAILURE)
         
     @staticmethod
     def __readfile() -> str:
-        
+        """
+        Read output file and return a string with a last
+        command executed by _system(cmd: str) function
+        """
         try:
             output = ''
         
@@ -42,7 +48,10 @@ class OS():
         
     @staticmethod     
     def _system(cmd : str) -> OSResult:
-        
+    """
+    Execute a shell command redirecting output text from output file.
+    Obtain a status code and the output text and return a OSResult object
+    """
         if os.name == 'posix':
             
             exit_code = os.system(f"{cmd} > {OS.__path}{OS.__filename}")
