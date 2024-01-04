@@ -24,7 +24,7 @@ jobs:
         run: |
           cd vos
           python -m venv venv
-          source venv/bin/activate
           sudo make install python_path=/venv/lib/python3.10/site-packages/
+          source venv/bin/activate
           python -c "from vos import OS; os_result = OS._system('ls -la'); print(os_result.exit_code); print(os_result.output)"
 
