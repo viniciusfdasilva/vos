@@ -44,7 +44,7 @@ Release Year: 2024
    ```python
    from vos import OS
    
-   OS._system('ls -la')
+   os_result = OS._system('ls -la')
 
    print(os_result.exit_code)
    print(os_result.output)
