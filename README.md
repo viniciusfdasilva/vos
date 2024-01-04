@@ -15,8 +15,11 @@
 ### About Library
 *************************
 Name: vos
+
 Author: Vinicius Silva
+
 Version: 0.1
+
 Release Year: 2024
 *************************
 
