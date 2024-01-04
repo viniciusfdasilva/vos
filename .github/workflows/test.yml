@@ -22,8 +22,11 @@ jobs:
       - name: Install vos
         shell: bash
         run: |
+          sudo apt update -y
+          sudo apt install python3-venv -y
           cd vos
-          sudo make install python_path=/usr/lib/python3.10/
-          python -c "import os as _; print(_.__file__)"
+          python -m venv venv
+          source venv/bin/activate
+          sudo make install python_path=/venv/lib/python3.10/site-packages/
           python -c "from vos import OS; os_result = OS._system('ls -la'); print(os_result.exit_code); print(os_result.output)"
 
