@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
+      - name: Checkouti
         uses: actions/checkout@v3
       
       - name: Python
@@ -19,10 +19,10 @@ jobs:
         with:
           python-version: "3.10"
       
-      - name: Install danix
+      - name: Install vos
         shell: bash
         run: |
           cd vos
-          sudo make install python_path=/lib/python3.10/
+          sudo make install python_path=/usr/lib/python3.10/
           python -c "from vos import OS; os_result = OS._system('ls -la'); print(os_result.exit_code); print(os_result.output)"
 
