@@ -48,10 +48,10 @@ class OS():
         
     @staticmethod     
     def _system(cmd : str) -> OSResult:
-    """
-    Execute a shell command redirecting output text from output file.
-    Obtain a status code and the output text and return a OSResult object
-    """
+        """
+        Execute a shell command redirecting output text from output file.
+        Obtain a status code and the output text and return a OSResult object
+        """
         if os.name == 'posix':
             
             exit_code = os.system(f"{cmd} > {OS.__path}{OS.__filename}")
