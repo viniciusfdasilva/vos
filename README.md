@@ -13,7 +13,7 @@
   cd vos
   ```
   ```shell
-  sudo make install python_path=[PYTHON_PATH]
+  sudo make install python_path=[PYTHON_LIB_PATH]
   ```
 ### About Library
 *************************
@@ -29,7 +29,7 @@ Release Year: 2024
 ### Remove
 
   ```shell
-  sudo make remove python_path=[PYTHON_PATH]
+  sudo make remove python_path=[PYTHON_LIB_PATH]
   ```
 
 ### Using

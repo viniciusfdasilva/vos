@@ -1,0 +1,30 @@
+name: Vos Python Library
+
+on: 
+  pull_request:
+    branches: [main]
+  push:
+    branches: [dev]
+
+jobs:
+  continuous-integration:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkouti
+        uses: actions/checkout@v3
+      
+      - name: Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.10"
+      
+      - name: Install vos
+        shell: bash
+        run: |
+          cd vos
+          python -m venv venv
+          sudo make install python_path=/venv/lib/python3.10/site-packages/
+          source venv/bin/activate
+          python -c "from vos import OS; os_result = OS._system('ls -la'); print(os_result.exit_code); print(os_result.output)"
+
